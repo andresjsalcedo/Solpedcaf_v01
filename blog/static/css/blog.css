@@ -1,0 +1,19 @@
+.item-search{
+    margin-left: 13.5rem;
+}
+.card-modulo1{
+    background-image: url(../image.png);
+    background-size: cover;
+    
+}
+.card-modulo2{
+    background-image: url(../image-card2.png);
+    background-size: cover;
+}
+.card-modulo3{
+    background-image: url(../image-card3.png);
+    background-size: cover;
+}
+.card-modulo-titulo{
+    font-weight: 900;
+}
