@@ -1,0 +1,18 @@
+{% extends "pagina_inicial/base.html" %}
+
+{% block title %}Pagina inicial{% endblock %}
+
+{% block content %}
+
+  {% for modulo in modulos %}
+
+    <div class="col">
+      <div class="card card-modulo2 mt-5 rounded-0 border-white" style="background-image: url('{{ modulo.imagen.url }}');">
+        <div class="card-body ">
+          <h1 class="card-title card-modulo-titulo text-white">{{ modulo.titulo }}</h1>
+          <p class="card-text text-white fw-semibold fs-4">{{ modulo.descripcion |truncatewords:30|linebreaks }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+
+  {% endfor %}
+{% endblock %}

@@ -1,5 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from .models import Post
+from django.shortcuts import render
+
 
 # Create your views here.
 def post_list(request):
@@ -21,3 +23,5 @@ def post_detail(request, id):
         'blog/post/detail.html',
         {'post': post}
  )
+
+
