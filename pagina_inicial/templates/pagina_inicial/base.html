@@ -37,13 +37,6 @@
           <li class="nav-item">
             <a class="nav-link active fw-semibold text-light fs-5 me-2" aria-current="page" href="#">Comentarios</a>
           </li>
-          <ul class="navbar-nav me-auto mb-1 ms-2 mt-1"></ul>
-          <li class="nav-item item-search mt-1">
-            <form class="form-inline my-3 my-lg-0">
-              <input class="form-control mr-sm-2 rounded-pill border-black" type="search" placeholder="Search"
-                aria-label="Search">
-            </form>
-          </li>
           <li class=" nav-item position-absolute top-0 end-0  mt-3 me-2">
             <img class="nav-link active d-none d-md-block" src="../../static/user.png" style="width: 3rem;">
           </li>
@@ -101,13 +94,12 @@
   </div>
   <!--Fin carrousel-->
     
+<div class="container-fluid">
   <div class="row">
- 
       {% block content %}
-      {% endblock %}
-      
+      {% endblock %}   
   </div>
-
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
