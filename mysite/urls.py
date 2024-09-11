@@ -25,6 +25,7 @@ from django.conf import settings
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('blog/', include('blog.urls', namespace='blog')),
-    path('pagina_inicial', include('pagina_inicial.urls', namespace='pagina_inicial'))
+    path('pagina_inicial', include('pagina_inicial.urls', namespace='pagina_inicial')),
+    path('etapa_plagas', include('etapa_plagas.urls', namespace='etapa_plagas')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
