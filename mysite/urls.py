@@ -27,5 +27,6 @@ urlpatterns = [
     path('blog/', include('blog.urls', namespace='blog')),
     path('pagina_inicial', include('pagina_inicial.urls', namespace='pagina_inicial')),
     path('etapa_plagas', include('etapa_plagas.urls', namespace='etapa_plagas')),
+    path('etapa_de_plantacion_plagas_enfermedades', include('etapa_de_plantacion_plagas_enfermedades.urls', namespace='etapa_de_plantacion_plagas_enfermedades'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

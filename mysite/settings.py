@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'pagina_inicial',
     'etapa_plagas',
+    'etapa_de_plantacion_plagas_enfermedades',
 ]
 
 MIDDLEWARE = [
