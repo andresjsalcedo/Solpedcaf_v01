@@ -11,7 +11,7 @@
         <div class="card-body col-xl-4 col-md-6 text-light">
           <h1 class="card-title fw-bold">{{ modulo.titulo }}</h1>
           <p class="card-text">{{ modulo.descripcion |truncatewords:30|linebreaks }}</p>
-          <a href="{ % url 'etapa_plagas' % }" class="btn btn-success">Ver Más</a>
+          <a href="{{ modulo.urlDestino }}" class="btn btn-success">Ver Más</a>
         </div>
       </div>
     </div>
