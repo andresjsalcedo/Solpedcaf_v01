@@ -1,0 +1,9 @@
+{% extends "broca/base.html" %}
+{% block title %}{{ modulo.titulo }}{% endblock %}
+{% block content %}
+<h1>{{ modulo.titulo }}</h1>
+<p class="date">
+    Published {{ post.publish }} by {{ post.author }}
+</p>
+{{ modulo.descripcion|linebreaks }}
+{% endblock %}

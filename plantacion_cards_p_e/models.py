@@ -6,6 +6,7 @@ class cardpe(models.Model):
     titulo = models.CharField(max_length=200)
     tipo = models.CharField(max_length=10)
     imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+    urlDestino = models.CharField(max_length=200, null=True)
 
 
 
