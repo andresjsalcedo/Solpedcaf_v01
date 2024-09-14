@@ -1,3 +1,7 @@
 .card-modulo{
     background-size: cover;
+    width: 100rem;
+}
+.container-pn{
+    width: 80%;
 }

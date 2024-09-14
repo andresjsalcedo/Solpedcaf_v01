@@ -26,7 +26,8 @@ SECRET_KEY = "django-insecure-=6o!17$i6f296vp16g)zw9+1&)y7@m%_9+)n6k&#igh134tqf%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.117.140.218', 'localhost']
+ALLOWED_HOSTS = ['18.218.56.198', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -38,10 +39,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'blog.apps.BlogConfig',
     'pagina_inicial',
     'etapa_plagas',
-    'etapa_de_plantacion_plagas_enfermedades',
+    'plantacion_cards_p_e',
+    'broca',
+
 ]
 
 MIDDLEWARE = [
@@ -83,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'solpedcaf',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'rootsena',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -130,7 +132,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "static/"
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'blog', 'static')
+    os.path.join(BASE_DIR, 'pagina_inicial', 'static')
 ]
 
 MEDIA_URL = MEDIA_URL = '/media/'

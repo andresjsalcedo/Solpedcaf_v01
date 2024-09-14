@@ -17,16 +17,16 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
-from blog import views
+from pagina_inicial import views
 from django.conf.urls.static import static
 from django.conf import settings
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('blog/', include('blog.urls', namespace='blog')),
     path('pagina_inicial', include('pagina_inicial.urls', namespace='pagina_inicial')),
     path('etapa_plagas', include('etapa_plagas.urls', namespace='etapa_plagas')),
-    path('etapa_de_plantacion_plagas_enfermedades', include('etapa_de_plantacion_plagas_enfermedades.urls', namespace='etapa_de_plantacion_plagas_enfermedades'))
+    path('plantacion_cards_p_e/', include('plantacion_cards_p_e.urls', namespace='plantacion_cards_p_e')),
+     path('broca', include('broca.urls', namespace='broca')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
