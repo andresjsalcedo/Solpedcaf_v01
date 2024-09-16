@@ -26,6 +26,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('pagina_inicial', include('pagina_inicial.urls', namespace='pagina_inicial')),
     path('etapa_plagas', include('etapa_plagas.urls', namespace='etapa_plagas')),
+    path('consejos_para_su_cultivo', include('consejos_para_su_cultivo.urls', namespace='consejos_para_su_cultivo')),
     path('plantacion_cards_p_e/', include('plantacion_cards_p_e.urls', namespace='plantacion_cards_p_e')),
      path('broca', include('broca.urls', namespace='broca')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
