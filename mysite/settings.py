@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-=6o!17$i6f296vp16g)zw9+1&)y7@m%_9+)n6k&#igh134tqf%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.217.142.33', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', '18.217.142.33', 'localhost']
 
 
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'pagina_inicial',
     'etapa_plagas',
+    'consejos_para_su_cultivo',
     'plantacion_cards_p_e',
     'broca',
 
@@ -85,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'solpedcaf',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'rootsena',
         'HOST': 'localhost',
         'PORT': '3306',
     }
