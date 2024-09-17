@@ -1,0 +1,23 @@
+{% extends "etapa_elecion_semilla/base.html" %}
+{% block title %}ELECCION SEMILLA{% endblock %}
+{% block content %}
+
+{% for variedade_info in variedade_infos %}
+
+<div class="accordion-item mt-5 border border-success-subtle border-3 rounded rounded-3">
+    <h2 class="accordion-header  border-3 rounded rounded-3 d-flex">
+      <button class="accordion-button collapsed fs-1 fw-bolder ms-1 mt-1 mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        {{ variedade_info.nombre }}
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse col-md-5 fw-semibold mt-3 ms-2" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">El árbol de café Castillo es una variedad de café que se originó en Guatemala en la década de 1940. Fue desarrollada por el Instituto Nacional de Investigaciones Agrícolas (INIAP) de Guatemala, en colaboración con la Fundación para el Desarrollo de la Caféicultura (FUNDECAFE) y la Cooperación Suiza para el Desarrollo (COSUDE).</div>
+  
+    <div class="col-md-5">
+        <img src="{{ variedade_info.imagen.url }}" class="img-fluid" style="width: 60%;">
+      </div>
+  </div> 
+  </div>
+
+{% endfor %}
+{% endblock %}
