@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'etapa_plagas',
     'consejos_para_su_cultivo',
     'plantacion_cards_p_e',
+    'etapa_elecion_semilla',
     'broca',
 
 ]
