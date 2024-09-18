@@ -1,8 +1,12 @@
 {% extends "etapa_elecion_semilla/base.html" %}
+{% load static %}
+
 {% block title %}ELECCION SEMILLA{% endblock %}
+
 {% block content %}
 
 {% for variedade_info in variedade_infos %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
     <div class="container-fluid mt-4">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -14,7 +18,7 @@
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="row">
-                            <div class="col-md-6 order-md-1 order-2">
+                            <div class="col-md-7 order-md-1 order-2">
                                 <p class="fw-semibold fs-5">{{ variedade_info.descripcion}}</p>
                                 <div class=" mt-5">
                                 <h2 class="fw-bold mb-4">A TENER EN CUENTA:</h2>
@@ -25,8 +29,8 @@
                                 </ul>
                                </div> 
                             </div>
-                            <div class="col-md-6 d-flex justify-content-center order-md-2 order-1 mb-3 mb-md-0">
-                                <img src="{{ variedade_info.imagen.url }}" class="img-fluid rounded">
+                            <div class="col-md-5  order-md-2 order-1 mb-3 mb-md-0">
+                                <img src="{{ variedade_info.imagen.url }}" class="img-fluid rounded img-accordion">
                             </div>
                         </div>
                     </div>
