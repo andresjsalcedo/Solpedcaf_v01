@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from .models import cardpe
 from django.http import Http404
+from django.db.models import Q
 # Create your views here.
+
+
 
 def cardpe_list(request):
     cardpes = cardpe.objects.all()

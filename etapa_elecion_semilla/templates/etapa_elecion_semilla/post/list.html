@@ -3,7 +3,7 @@
 {% block content %}
 
 {% for variedade_info in variedade_infos %}
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-4">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header border border-3 border-success rounded rounded-3" id="headingOne">
@@ -14,12 +14,19 @@
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="row">
-                            <div class="col-md-7 order-md-1 order-2">
-                                <p class=" fw-semibold">{{ variedade_info.descripcion}}</p>
-                                <p class="fw-semibold">{{ variedade_info.a_tener_en_cuenta}}</p>
+                            <div class="col-md-6 order-md-1 order-2">
+                                <p class="fw-semibold fs-5">{{ variedade_info.descripcion}}</p>
+                                <div class=" mt-5">
+                                <h2 class="fw-bold mb-4">A TENER EN CUENTA:</h2>
+                                <ul class="fs-5">
+                                <li class="fw-semibold">{{ variedade_info.a_tener_en_cuenta}}</li>
+                                <li class="fw-semibold">{{ variedade_info.a_tener_en_cuenta2}}</li>
+                                <li class="fw-semibold">{{ variedade_info.a_tener_en_cuenta3}}</li>
+                                </ul>
+                               </div> 
                             </div>
-                            <div class="col-md-5 d-flex justify-content-center order-md-2 order-1 mb-3 mb-md-0">
-                                <img src="media/modulos/image 8.png" alt="Trabajador de café" class="img-fluid rounded">
+                            <div class="col-md-6 d-flex justify-content-center order-md-2 order-1 mb-3 mb-md-0">
+                                <img src="{{ variedade_info.imagen.url }}" class="img-fluid rounded">
                             </div>
                         </div>
                     </div>

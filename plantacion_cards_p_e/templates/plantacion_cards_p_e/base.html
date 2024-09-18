@@ -93,8 +93,29 @@
     </div>
   </div>
   <!--Fin carrousel-->
+
+
+    <div class="container-fluid mb-4">
+      <div class="row">
+        <div class="col-md-12 search">
+          <form method="GET">
+            <div id="custom-search-input">
+              <div class="inpunt-group col-xl-12">
+                <input type="text" class="from-control" placeholder="buscar" name="buscar" value="{{ request.GET.buscar }}">
+                <span class="inpunt-group-list">
+                  <i class="icon icon-search"></i>
+                  <button type="submit" class="btn btn-success">Buscar</button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  
     
-<div class="container-fluid container-pn">
+<div class="container-fluid">
   <div class="row">
       {% block content %}
       {% endblock %}   
