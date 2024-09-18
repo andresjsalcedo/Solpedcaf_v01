@@ -3,21 +3,30 @@
 {% block content %}
 
 {% for variedade_info in variedade_infos %}
-
-<div class="accordion-item mt-5 border border-success-subtle border-3 rounded rounded-3">
-    <h2 class="accordion-header  border-3 rounded rounded-3 d-flex">
-      <button class="accordion-button collapsed fs-1 fw-bolder ms-1 mt-1 mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        {{ variedade_info.nombre }}
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse col-md-5 fw-semibold mt-3 ms-2" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">El árbol de café Castillo es una variedad de café que se originó en Guatemala en la década de 1940. Fue desarrollada por el Instituto Nacional de Investigaciones Agrícolas (INIAP) de Guatemala, en colaboración con la Fundación para el Desarrollo de la Caféicultura (FUNDECAFE) y la Cooperación Suiza para el Desarrollo (COSUDE).</div>
-  
-    <div class="col-md-5">
-        <img src="{{ variedade_info.imagen.url }}" class="img-fluid" style="width: 60%;">
-      </div>
-  </div> 
-  </div>
+    <div class="container-fluid mt-5">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header border border-3 border-success rounded rounded-3" id="headingOne">
+                    <button class="accordion-button fw-bold fs-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      {{ variedade_info.nombre }}
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-7 order-md-1 order-2">
+                                <p class=" fw-semibold">{{ variedade_info.descripcion}}</p>
+                                <p class="fw-semibold">{{ variedade_info.a_tener_en_cuenta}}</p>
+                            </div>
+                            <div class="col-md-5 d-flex justify-content-center order-md-2 order-1 mb-3 mb-md-0">
+                                <img src="media/modulos/image 8.png" alt="Trabajador de café" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endfor %}
 {% endblock %}
