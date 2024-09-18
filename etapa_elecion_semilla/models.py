@@ -5,7 +5,9 @@ from django.db import models
 class variedade_info(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField()
-    a_tener_en_cuenta = models.TextField()
+    a_tener_en_cuenta = models.TextField( null=True)
+    a_tener_en_cuenta2 = models.TextField( null=True)
+    a_tener_en_cuenta3 = models.TextField(null=True)
     imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
 
 
