@@ -7,26 +7,19 @@
 {% block content %}
 
   {% for broca in brocas %}
-    <div class="col-xl-6 ms-3 mt-4">
-        <div class="col-xl-9">
+    <div class="col-xl-6 mt-4">
           <h1 class="fw-bold">{{ broca.nombre }}</h1>
           <h2 class="fw-bold">{{ broca.tipo }}</h2>
-        
-            <h1 class="fw-bold">Sintomas:</h1>
-            <p class="">{{ broca.sintomas }}</p>
+            <h1 class="fw-bold mt-4">Sintomas:</h1>
+            <p class="fw-semibold">{{ broca.sintomas }}</p>
             <h1 class="fw-bold">Descripcion</h1>
-          <p class="fw-semibold">{{ broca.descripcion |truncatewords:100|linebreaks }}</p>
-        </div>
+          <p class="fw-semibold">{{ broca.descripcion |truncatewords:100 }}</p>
      </div>
 
     <div class="col-xl-5 mt-4">
-        <div class="col-xl-12">
-            <img src="{{ broca.imagen.url }}" class="img-fluid rounded-0" style="width: 800px;">
-            <div class="col-xl-12">
-            <h3 class="fw-bold mt-3">Metodos de prevencion:</h3>
-            <p class="">{{ broca.mdp }}</p>
-            </div>
-        </div>
+            <img src="{{ broca.imagen.url }}" class="img-fluid rounded-0 d-flex justify-content-center">
+            <h3 class="fw-bold mt-3 ">Metodos de prevencion:</h3>
+            <p class="fw-semibold ">{{ broca.mdp }}</p>
     </div>
  
   {% endfor %}

@@ -3,16 +3,16 @@
 {% block content %}
 
 {% for etapa in etapas %}
-<div class="col-xl-5">
-  <div class="card card-etapas border-black mb-4" style="max-width: 1000px;">
+<div class="col-xl-6 d-flex justify-content-center">
+  <div class="card card-etapas border-black mb-4" style="max-width: 800px;">
       <div class="row g-0">
         <div class="col-md-7">
           <div class="card-body">
             <h1 class="card-title fw-bold">{{ etapa.titulo }}</h1>
-            <a href="{{ etapa.urlDestino }}" class="btn btn-success mt-4">Ver Más</a>
+            <a href="{{ etapa.urlDestino }}" class="btn btn-success position-absolute bottom-0 start-0 mb-3 ms-3">Ver Más</a>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 justify-content-center">
           <img src="{{ etapa.imagen.url }}" class="img-fluid card-img-end justify-content-end p-3" style="width: 100%;">
         </div>
       </div>
