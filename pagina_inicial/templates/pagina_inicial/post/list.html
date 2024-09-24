@@ -9,11 +9,13 @@
   {% for modulo in modulos %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <div class="col-xl-6 d-flex justify-content-center mb-4">
-      <div class="card d-flex card-modulo rounded-0 border-white border-shadow" style="background-image: url('{{ modulo.imagen.url }}');">
-        <div class="card-body col-xl-8 col-lg-7 text-light">
-          <h1 class="card-title fw-bold">{{ modulo.titulo }}</h1>
-          <p class="card-text card-descripcion fs-4">{{ modulo.descripcion |truncatewords:30 }}</p>
-          <a href="{{ modulo.urlDestino }}" class="btn btn-outline-success text-light border-light rounded-0 fs-5" style="font-weight: 800;">Conoce Más</a>
+      <div class="card d-flex card-modulo rounded-0 border-white border-shadow" style="background-image: url('{{ modulo.imagen.url }}'); width: 100rem;">
+        <div class="card-body col-xxl-6 col-xl-8 col-lg-7 text-light">
+          <h1 class="card-title fw-bold" style="font-size: 4.5rem;">{{ modulo.titulo }}</h1>
+          <p class="card-text card-descripcion fs-3 fw-semibold mb-4">{{ modulo.descripcion |truncatewords:30 }}</p>
+          <div class="btn mt-3">
+          <a href="{{ modulo.urlDestino }}" class="btn btn-outline-success text-light border-light rounded-0 position-absolute bottom-0 start-0 ms-3 mb-2" style="font-weight: 900; font-size: 1.5rem;">Conoce Más</a>
+          </div>
         </div>
       </div>
     </div>

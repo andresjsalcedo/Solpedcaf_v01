@@ -1,22 +1,23 @@
 {% extends "consejos_para_su_cultivo/base.html" %}
+{% load static %}
 {% block title %}Consejos para su cultivo{% endblock %}
 {% block content %}
 
 {% for etapa in etapas %}
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
 <div class="col-xl-6 d-flex justify-content-center">
-  <div class="card card-etapas border-black mb-4" style="max-width: 800px;">
-      <div class="row g-0">
-        <div class="col-md-7">
-          <div class="card-body">
-            <h1 class="card-title fw-bold">{{ etapa.titulo }}</h1>
-            <a href="{{ etapa.urlDestino }}" class="btn btn-success position-absolute bottom-0 start-0 mb-3 ms-3">Ver Más</a>
+<div class="card rounded-0 mt-3 text-white" style="background-image: url('{{ etapa.imagen.url}}'); background-size: cover; width: 80rem; height: 25rem;">
+    <div class="row g-0">
+      <div class="col-xl-8">
+        <div class="card-body">
+          <h1 class="card-title fw-bold shadow-xl" style="font-size: 6rem;">{{ etapa.titulo }}</h1>
+          <div class="btn mt-5">
+          <a href="{{ etapa.urlDestino }}" class="btn btn-outline-success text-white border-white rounded-0 fs-5 position-absolute bottom-0 start-0 ms-3 mb-3" style="font-weight: 900;">Ver Más</a>
           </div>
-        </div>
-        <div class="col-md-5 justify-content-center">
-          <img src="{{ etapa.imagen.url }}" class="img-fluid card-img-end justify-content-end p-3" style="width: 100%;">
         </div>
       </div>
     </div>
   </div>
+</div>
 {% endfor %}
 {% endblock %}

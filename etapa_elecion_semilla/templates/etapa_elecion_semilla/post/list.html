@@ -11,7 +11,7 @@
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header border border-3 border-success rounded rounded-3" id="headingOne">
-                    <button class="accordion-button fw-bold fs-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 4rem;">
                       {{ variedade_info.nombre }}
                     </button>
                 </h2>
@@ -19,18 +19,18 @@
                     <div class="accordion-body">
                         <div class="row">
                             <div class="col-md-7 order-md-1 order-2">
-                                <p class="fw-semibold fs-5">{{ variedade_info.descripcion}}</p>
+                                <p class="fw-semibold fs-2">{{ variedade_info.descripcion}}</p>
                                 <div class=" mt-5">
-                                <h2 class="fw-bold mb-4">A TENER EN CUENTA:</h2>
-                                <ul class="fs-5">
+                                <h1 class="fw-bold mb-4" style="font-size: 4rem;">A TENER EN CUENTA:</h1>
+                                <ul class="fs-3">
                                 <li class="fw-semibold">{{ variedade_info.a_tener_en_cuenta}}</li>
                                 <li class="fw-semibold">{{ variedade_info.a_tener_en_cuenta2}}</li>
                                 <li class="fw-semibold">{{ variedade_info.a_tener_en_cuenta3}}</li>
                                 </ul>
                                </div> 
                             </div>
-                            <div class="col-md-5  order-md-2 order-1 mb-3 mb-md-0">
-                                <img src="{{ variedade_info.imagen.url }}" class="img-fluid rounded img-accordion">
+                            <div class="col-md-5 d-flex justify-content-center order-md-2 order-1 mb-3 mb-md-0">
+                                <img src="{{ variedade_info.imagen.url }}" class="img-fluid rounded img-accordion" style="width: 70rem;">
                             </div>
                         </div>
                     </div>
