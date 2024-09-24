@@ -7,9 +7,9 @@
 {% for etapa in etapas %}
 <link rel="stylesheet" href="{% static 'css/style.css'%}">
 <div class="col-xl-6 d-flex justify-content-center">
-<div class="card rounded-0 mt-3 text-white" style="background-image: url('{{ etapa.imagen.url}}'); background-size: cover; width: 85rem;">
+<div class="card rounded-0 mt-3 mb-2 text-white" style="background-image: url('{{ etapa.imagen.url}}'); background-size: cover; width: 85rem;">
     <div class="row g-0">
-      <div class="col-xl-5">
+      <div class="col-xl-12">
         <div class="card-body">
           <h1 class="card-title fw-bold" style="font-size: 3.5rem;">{{ etapa.titulo }}</h1>
           <p class="card-text fw-semibold" style="font-size: 1.6rem;">{{ etapa.descripcion }}</p>
