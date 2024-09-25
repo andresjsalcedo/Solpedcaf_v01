@@ -30,5 +30,6 @@ urlpatterns = [
     path('plantacion_cards_p_e/', include('plantacion_cards_p_e.urls', namespace='plantacion_cards_p_e')),
     path('etapa_elecion_semilla', include('etapa_elecion_semilla.urls', namespace='etapa_elecion_semilla')),
     path('broca', include('broca.urls', namespace='broca')),
+    path('cpc_etapa_de_siembra', include('cpc_etapa_de_siembra.urls', namespace='cpc_etapa_de_siembra')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

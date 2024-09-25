@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <div class="col-xl-6 d-flex justify-content-center mb-4">
       <div class="card d-flex card-modulo rounded-0 border-white border-shadow" style="background-image: url('{{ modulo.imagen.url }}'); width: 100rem; height: 23rem;">
-        <div class="card-body col-xl-10 text-light">
-          <h1 class="card-title fw-bold" style="font-size: 3.5rem;">{{ modulo.titulo }}</h1>
-          <p class="card-text card-descripcion fs-3 fw-semibold mb-4">{{ modulo.descripcion |truncatewords:30 }}</p>
+        <div class="card-body text-light">
+          <h1 class="card-title col-lg-8 fw-bold" style="font-size: 3.5rem;">{{ modulo.titulo }}</h1>
+          <p class="card-text col-lg-10 card-descripcion fs-2 fw-semibold mb-4">{{ modulo.descripcion |truncatewords:30 }}</p>
           <div class="btn mt-3">
           <a href="{{ modulo.urlDestino }}" class="btn btn-outline-success text-light border-light rounded-0 position-absolute bottom-0 start-0 ms-3 mb-3" style="font-weight: 900; font-size: 1.5rem;">Conoce Más</a>
           </div>

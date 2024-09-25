@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'plantacion_cards_p_e',
     'etapa_elecion_semilla',
     'broca',
+    'cpc_etapa_de_siembra',
 
 ]
 
