@@ -32,5 +32,6 @@ urlpatterns = [
     path('broca', include('broca.urls', namespace='broca')),
     path('cpc_etapa_de_siembra', include('cpc_etapa_de_siembra.urls', namespace='cpc_etapa_de_siembra')),
     path('cpc_etapa_cuidado_inicial', include('cpc_etapa_cuidado_inicial.urls', namespace='cpc_etapa_cuidado_inicial')),
+    path('cpc_etapa_fertilizacion', include('cpc_etapa_fertilizacion.urls', namespace='cpc_etapa_fertilizacion')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
