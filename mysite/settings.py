@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'etapa_elecion_semilla',
     'broca',
     'cpc_etapa_de_siembra',
+    'cpc_etapa_cuidado_inicial',
 
 ]
 
