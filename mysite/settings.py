@@ -134,10 +134,11 @@ USE_TZ = True
 # Directorio donde se recogerán los archivos estáticos
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'pagina_inicial', 'static')
+    os.path.join(BASE_DIR, 'pagina_inicial', 'static'),
+    os.path.join(BASE_DIR, 'consejos_para_su_cultivo', 'static')
 ]
 
 MEDIA_URL = MEDIA_URL = '/media/'
