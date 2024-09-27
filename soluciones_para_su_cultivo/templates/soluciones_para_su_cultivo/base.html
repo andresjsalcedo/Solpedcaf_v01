@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  
 </head>
 <body>
 
@@ -15,7 +14,7 @@
   <!--MENU HORIZONTAL-->
   <nav class="navbar navbar-expand-lg" id="navbar" style="background-color:#00BF63">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold fs-1 ms-1 text-light" href="pagina principal.html">PLANTACION</a>
+      <a class="navbar-brand fw-bold ms-1 text-light" href="pagina principal.html" style="font-size: 3.5rem;">SOLUCIONES PARA SU CULTIVO</a>
       <button class="navbar-toggler bg-white border-secondary" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -25,57 +24,42 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-1 ms-2 mt-1">
           <li class="nav-item">
-            <a class="nav-link active fw-semibold text-light fs-5 me-2" aria-current="page" href="#">Configuracion</a>
+            <a class="nav-link active fw-semibold text-light fs-5 me-2" aria-current="page" href="pagina_inicial">INICIO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active fw-semibold text-light fs-5 me-2 " aria-current="page" href="#">Contacto y
-              redes</a>
+            <a class="nav-link active fw-semibold text-light fs-5 me-2" aria-current="page" href="plagas_Y_enfermedades">PLAGAS Y ENFERMEDADES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active fw-semibold text-light fs-5 me-2" aria-current="page" href="#">Calificanos</a>
+            <a class="nav-link active fw-semibold text-light fs-5 me-2 " aria-current="page" href="consejos_para_su_cultivo">CONSEJOS PARA SU CULTIVO</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active fw-semibold text-light fs-5 me-2" aria-current="page" href="#">Comentarios</a>
           </li>
-          <li class=" nav-item position-absolute top-0 end-0  mt-3 me-2">
+          <li class=" nav-item position-absolute top-0 end-0  mt-4 me-2">
             <img class="nav-link active d-none d-md-block" src="../../static/user.png" style="width: 3rem;">
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
   <!--FIN MENU HORIZONTAL-->
-
-
-
-
-    <div class="container-fluid mb-4 mt-4">
-      <div class="row">
-        <div class="col-md-12 search">
-          <form method="GET">
-            <div id="custom-search-input">
-              <div class="inpunt-group col-xl-12">
-                <input type="text" class="from-control" placeholder="buscar" name="buscar" value="{{ request.GET.buscar }}">
-                <span class="inpunt-group-list">
-                  <i class="icon icon-search"></i>
-                  <button type="submit" class="btn btn-success">Buscar</button>
-                </span>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-  
     
+<div class="container-fluid">
+  <div class="col-xl-8 mt-3">
+    <h1 class="col-xl-12 fw-bold text-black mb-2" style="font-size: 3.5rem;">SOLUCIONES PARA SU CULTIVO AFECTADO</h1>
+    <h4 class="col-xl-8 text-black mb-4" style="font-size: 2rem;">¿Cuál es tu variedad de café y qué plagas y enfermedades 
+      le pueden afectar? En nuestro panel de variedades de café, podrás explorar las diferentes opciones y encontrar 
+      la que mejor se adapte a tus necesidades y circunstancias.</h4>
+    </div>
+</div>
+
 <div class="container-fluid">
   <div class="row">
       {% block content %}
       {% endblock %}   
   </div>
 </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

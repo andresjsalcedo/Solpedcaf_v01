@@ -24,9 +24,10 @@ from django.conf import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', include('pagina_inicial.urls', namespace='pagina_inicial')),
-    path('etapa_plagas', include('etapa_plagas.urls', namespace='etapa_plagas')),
+    path('pagina_inicial', include('pagina_inicial.urls', namespace='pagina_inicial')),
+    path('plagas_y_enfermedades', include('plagas_y_enfermedades.urls', namespace='plagas_y_enfermedades')),
     path('consejos_para_su_cultivo', include('consejos_para_su_cultivo.urls', namespace='consejos_para_su_cultivo')),
+    path('soluciones_para_su_cultivo', include('soluciones_para_su_cultivo.urls', namespace='soluciones_para_su_cultivo')),
     path('plantacion_cards_p_e/', include('plantacion_cards_p_e.urls', namespace='plantacion_cards_p_e')),
     path('etapa_elecion_semilla', include('etapa_elecion_semilla.urls', namespace='etapa_elecion_semilla')),
     path('broca', include('broca.urls', namespace='broca')),

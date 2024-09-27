@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EtapaPlagasConfig(AppConfig):
+class SolucionesParaSuCultivoConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'etapa_plagas'
+    name = 'soluciones_para_su_cultivo'

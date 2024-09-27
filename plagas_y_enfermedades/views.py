@@ -8,7 +8,7 @@ def etapa_list(request):
     etapas = etapa.objects.all()
     return render(
         request,
-        'etapa_plagas/post/list.html', 
+        'plagas_y_enfermedades/post/list.html', 
         {'etapas': etapas})
 
 
@@ -19,5 +19,5 @@ def etapa_detail(request, id):
         raise Http404("No Post found.")
     return render(
         request, 
-        'etapa_plagas/post/detail.html', 
+        'plagas_y_enfermedades/post/detail.html', 
         {'etapa': etapa})  
