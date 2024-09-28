@@ -1,0 +1,47 @@
+{% extends "etapa_fertilizacion/base.html" %}
+{% load static %}
+
+{% block title %}FERTILIZACION{% endblock %}
+
+{% block content %}
+
+{% for etapa in etapas %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <div class="container-fluid mt-4">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header border border-3 border-success rounded rounded-3" id="headingOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 4rem;">
+                      {{ etapa.nombre }}
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-7 col-lg-6 d-flex justify-content-center">
+                                <p class="fw-semibold fs-3">{{ etapa.descripcion}}</p>
+                            </div>
+                            <div class="col-5 col-lg-6 d-flex justify-content-center">
+                                <img src="{{ etapa.imagen.url }}" class="col-md-4 img-fluid rounded img-accordion mb-3" style="width: 50rem;">
+                            </div>
+                        </div>    
+
+                        <div class="row">
+                            <div class="col-md-12 justify-content-center order-md-2 order-1 mb-3 mb-md-0">
+                                <div class="">
+                                <h1 class="fw-bold mb-4" style="font-size: 4rem;">Método de análisis casero:</h1>
+                                <ul class="fs-3">
+                                <li class="fw-semibold">{{ etapa.a_tener_en_cuenta}}</li>
+                                <li class="fw-semibold">{{ etapa.a_tener_en_cuenta2}}</li>
+                                <li class="fw-semibold">{{ etapa.a_tener_en_cuenta3}}</li>
+                                </ul>
+                               </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}

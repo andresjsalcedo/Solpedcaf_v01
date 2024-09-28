@@ -40,11 +40,15 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'pagina_inicial',
-    'etapa_plagas',
+    'plagas_y_enfermedades',
     'consejos_para_su_cultivo',
+    'soluciones_para_su_cultivo',
     'plantacion_cards_p_e',
     'etapa_elecion_semilla',
     'broca',
+    'cpc_etapa_de_siembra',
+    'cpc_etapa_cuidado_inicial',
+    'cpc_etapa_fertilizacion',
 
 ]
 
@@ -131,10 +135,11 @@ USE_TZ = True
 # Directorio donde se recogerán los archivos estáticos
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'pagina_inicial', 'static')
+    os.path.join(BASE_DIR, 'pagina_inicial', 'static'),
+    os.path.join(BASE_DIR, 'consejos_para_su_cultivo', 'static')
 ]
 
 MEDIA_URL = MEDIA_URL = '/media/'
